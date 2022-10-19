@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg_page {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(217deg, 54%, 11%);
+  display: flex;
+  align-content: center;
+}
+
+.card {
+  width: clamp(390px, 20%, 500px);
+  height: clamp(640px, 61%, 700px);
+  margin: auto;
+  background-color: hsl(216deg, 50%, 16%);
+  border-radius: 18px;
+  box-shadow: 0 30px 25px 10px hsla(217deg, 45%, 6%, 0.582);
+}
+
+.img_container {
+  padding: 25px 25px 0px 25px;
+}
+
+.artwork_picture {
+  width: 100%;
+  height: 100%;
+  border-radius: 8.3333333333px;
+  position: relative;
+  bottom: -4px;
+  margin-top: -4px;
+}
+
+.hover_bg_container {
+  width: 100%;
+  height: 100%;
+  border-radius: 8.3333333333px;
+  background-color: hsl(216deg, 50%, 16%);
+}
+
+.text_container {
+  font-family: "Outfit", sans-serif;
+  padding: 18px 25px;
+}
+
+.white_text {
+  color: hsl(0deg, 0%, 100%);
+}
+
+h1.artwork_name {
+  font-weight: 600;
+  margin-bottom: 22px;
+  font-size: 1.4em;
+  letter-spacing: 1px;
+}
+
+.nft_text > p {
+  color: hsl(215deg, 51%, 70%);
+  font-size: 1.3em;
+  line-height: 1.4em;
+  margin-bottom: 22px;
+}
+
+.price_days_container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 22px;
+}
+
+.eth_price {
+  color: hsl(178deg, 100%, 50%);
+  font-size: 1.1em;
+  line-height: 1.1em;
+  align-content: center;
+}
+
+.eth_price > .eth_symbol {
+  height: 1.1em;
+  margin: 0px 3px -3px 0px;
+}
+
+.price_days_container > h3 {
+  color: hsl(215deg, 51%, 70%);
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+hr.line {
+  margin-bottom: 20px;
+  border: 1px solid hsl(215deg, 32%, 27%);
+}
+
+.profile_credits_artwork {
+  display: flex;
+  height: 2.3em;
+  line-height: 2.3em;
+  color: hsl(215deg, 51%, 70%);
+  font-weight: 300;
+  font: 0.6em;
+}
+
+.profile_credits_artwork img {
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 0px 20px 0px 0px;
+  height: 100%;
+  margin-bottom: 15px;
+}
+
+.img_container:hover .hover_bg_container:after {
+  content: url("images/icon-view.svg");
+  position: absolute;
+  top: 35%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+}
+
+.hover_bg_container:hover {
+  cursor: pointer;
+}
+
+.artwork_picture:hover {
+  opacity: 50%;
+}
+
+.hover_bg_container:hover {
+  background-color: aqua;
+}
+
+.white_text:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+
+footer {
+  background-color: hsl(217deg, 54%, 11%);
+  color: hsl(215deg, 51%, 70%);
+  display: block;
+  font-size: 1em;
+  margin-top: 25%;
+  text-align: center;
+}
+
+footer a:visited {
+  color: azure;
+}
+
+@media screen and (max-width: 378px) {
+  .card {
+    width: clamp(330px, 20%, 500px);
+    height: clamp(590px, 55%, 700px);
+    margin: auto;
+    background-color: hsl(216deg, 50%, 16%);
+    border-radius: 18px;
+    box-shadow: 0 30px 25px 10px hsla(217deg, 45%, 6%, 0.582);
+  }
+  .img_container:hover .hover_bg_container:after {
+    content: url("images/icon-view.svg");
+    position: absolute;
+    top: 31%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-height: 950px) {
+  .img_container:hover .hover_bg_container:after {
+    content: url("images/icon-view.svg");
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}/*# sourceMappingURL=main.css.map */

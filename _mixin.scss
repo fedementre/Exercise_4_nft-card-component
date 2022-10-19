@@ -1,0 +1,39 @@
+//main: main.scss
+
+@import "variables";
+
+@mixin artwork_img_set($value){
+    width: 100%;
+    height: 100%;
+    border-radius: $value/3;
+}
+
+@mixin nft_text_set($value) {
+    font-family: $font_card_generic;
+    padding: 18px 25px;
+}
+
+@mixin font_artwork_name($value) {
+    font-weight: 600;
+    margin-bottom: $text_margin_bottom;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+}
+
+@mixin font_nft_paragraph {
+    color: $color_paragraph;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    margin-bottom: $text_margin_bottom;
+}
+
+@mixin price_font_set {
+    color: $price_color_and_hover;
+    font-size: 1.1em ;
+    line-height: 1.1em;
+    align-content: center;
+}
+
+@mixin profile_credits_font_set {
+        
+}

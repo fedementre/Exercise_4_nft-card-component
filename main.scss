@@ -1,0 +1,205 @@
+@import "variables";
+@import "mixin";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.bg_page{
+    width: 100vw;
+    height: 100vh;
+    background-color: $background_main;
+    display: flex;
+    align-content: center;
+}
+
+
+.card{
+    width: clamp(390px, 20%, 500px);  
+    height: clamp(640px, 61%, 700px);
+    margin: auto;    
+    background-color: $background_card;
+    border-radius: $border_radius_card;
+    box-shadow: 0 30px 25px 10px $shadow_color;
+}
+
+
+// SET PADDING IN IMG_CONTAINER
+.img_container{
+    padding: $padding_img_container;
+    
+}
+
+
+.artwork_picture{
+    @include artwork_img_set(25px);
+    position: relative;
+    bottom: -4px;
+    margin-top: -4px
+}
+
+.hover_bg_container{
+    @include artwork_img_set(25px);
+    background-color:$background_card;
+
+}
+
+.text_container{
+    @include nft_text_set(0);
+}
+
+.white_text{
+    color:$white
+}
+
+h1.artwork_name{
+    @include font_artwork_name(0);
+}
+
+.nft_text>p{
+    @include font_nft_paragraph
+}
+
+.price_days_container{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: $text_margin_bottom;
+
+}
+
+.eth_price{
+    @include price_font_set
+}
+
+.eth_price>.eth_symbol{
+    height: 1.1em;
+    margin: 0px 3px -3px 0px;
+}
+
+.price_days_container>h3{
+    color: $color_paragraph;
+    font-size: 1.1em;
+    font-weight: $font_weight_second;
+}
+
+hr.line{
+    margin-bottom: 20px;
+    border: 1px solid $line;
+}
+
+.profile_credits_artwork{
+    display: flex;
+    height: 2.3em;
+    line-height: 2.3em ;
+    color: $color_paragraph;
+    font-weight: $font_weight_first;
+    font: 0.6em;
+}
+
+.profile_credits_artwork img{
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 0px 20px 0px 0px;
+    height: 100%;
+    margin-bottom: 15px;
+}
+
+
+// ICON-VIEW.SVG
+.img_container:hover .hover_bg_container:after{
+    content: url("images/icon-view.svg");
+    position: absolute;
+    top: 35%;
+    left:50.5%;
+    transform: translate(-50%, -50%);
+
+}
+
+.hover_bg_container:hover{
+    cursor: pointer;
+
+}
+
+.artwork_picture:hover{
+    opacity: 50%;
+}
+
+.hover_bg_container:hover{
+    background-color: aqua;
+
+}
+
+.white_text:hover{
+    color: $price_color_and_hover;
+    cursor: pointer;
+}
+ 
+footer{
+    background-color: $background_main;
+    color: $color_paragraph;
+    display: block;
+    font-size: 1em;
+    margin-top: 25%;
+    text-align: center;
+
+}
+
+footer a:visited{
+    color: azure;
+}
+
+
+@media screen and (max-width:378px){
+    .card{
+        width: clamp(330px, 20%, 500px);  
+        height: clamp(590px, 55%, 700px);
+        margin: auto;    
+        background-color: $background_card;
+        border-radius: $border_radius_card;
+        box-shadow: 0 30px 25px 10px $shadow_color;
+    }
+
+    .img_container:hover .hover_bg_container:after{
+        content: url("images/icon-view.svg");
+        position: absolute;
+        top: 31%;
+        left:50.5%;
+        transform: translate(-50%, -50%);
+    
+    }
+  
+
+    
+}
+
+@media screen and (min-height: 950px){
+    .img_container:hover .hover_bg_container:after{
+        content: url("images/icon-view.svg");
+        position: absolute;
+        top: 37%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
