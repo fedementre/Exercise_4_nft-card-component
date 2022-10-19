@@ -119,16 +119,15 @@ hr.line {
   transform: translate(-50%, -50%);
 }
 
-.hover_bg_container:hover {
+.hover_bg_container:hover{
   cursor: pointer;
+  transition: all ease-in 0.5s;
+  background-color: aqua;
+
 }
 
 .artwork_picture:hover {
   opacity: 50%;
-}
-
-.hover_bg_container:hover {
-  background-color: aqua;
 }
 
 .white_text:hover {
